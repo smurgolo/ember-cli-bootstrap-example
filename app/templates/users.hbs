@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>List of Users</h2>
+  <div class="row-fluid">
+    <ul class="nav nav-list span3 well">
+    {{#each user in model}}
+      <li>
+        {{#link-to 'users.user' user}}{{user.fullName}}{{/link-to}}     
+      </li>
+    {{/each}}
+    </ul>
+  <p>{{totalUsers}} total of users</p>
+  </div>
+
+  {{outlet}}
+
+</div>
